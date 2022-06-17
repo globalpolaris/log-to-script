@@ -2,7 +2,18 @@
 
 This script is used to convert log files to csv
 
-Compatible log example:
+### Usage:  
+> python log-to-script.py logfile
+
+Example:
+> python log-to-script.py Log-10-10-2022.log
+
+### Output:
+Currently, output will be saved in directory where the script is located, named as **output.csv**.
+
+If you are converting more than one log file, please rename the previous output as it will get overwritten
+
+#### Compatible log example:
 ```
 sh firewall policy
 config firewall policy
@@ -28,4 +39,4 @@ config firewall policy
         set logtraffic all
         set comments "Comments"
     next
-end
+end```
