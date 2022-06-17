@@ -22,10 +22,9 @@ def reset_dict():
 def create_csv(filename):
     src = ""
     res = reset_dict()
-    with open('FWCORE Policy.log') as log:
+    with open(filename) as log:
         with open('output.csv', 'w') as csv_file:
             w = csv.DictWriter(csv_file, lineterminator='\n', delimiter=';', fieldnames=fields)
-            # w.writerow(dict((f,f) for f in fields))
             w.writeheader()
             res = reset_dict()
             for l in log:
